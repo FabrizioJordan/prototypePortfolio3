@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SemiFooter from '../components/SemiFooter.astro';
+
+import galleryImage from "/src/assets/images/gallery/a1.webp"
 ---
 
 <Layout title="Portfolio Prototype v3 | Gallery">
@@ -23,8 +25,8 @@ import SemiFooter from '../components/SemiFooter.astro';
 
                     <header class="relative h-[400px]">
                         <div class="absolute top-0 right-0 flex flex-row gap-8">
-                            <img class="h-[400px]" src="/src/assets/images/gallery/a1.webp" alt="">
-                            <img class="h-[400px]" src="/src/assets/images/gallery/a1.webp" alt="">
+                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
+                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
                         </div>
                     </header>
 
@@ -39,8 +41,8 @@ import SemiFooter from '../components/SemiFooter.astro';
 
                     <header class="relative h-[400px]">
                         <div class="absolute top-0 right-0 flex flex-row gap-4 ">
-                            <img class="h-[400px]" src="/src/assets/images/gallery/a1.webp" alt="">
-                            <img class="h-[400px]" src="/src/assets/images/gallery/a1.webp" alt="">
+                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
+                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
                         </div>
                     </header>
 
@@ -55,11 +57,11 @@ import SemiFooter from '../components/SemiFooter.astro';
 
                     <header class="relative h-[400px]">
                         <div class="absolute top-0 right-0 flex flex-row gap-4 ">
-                            <img class="h-[400px]" src="/src/assets/images/gallery/a1.webp" alt="">
-                            <img class="h-[400px]" src="/src/assets/images/gallery/a1.webp" alt="">
+                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
+                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
                         </div>
                     </header>
-
+                    
                     <footer class="flex flex-col gap-4 max-w-lg items-start">
                         <h4 class="text-xl">Common.wtf</h4>
                         <p class="text-[#8a847a] text-lg">A weekend project wrapped in a single HTML & CSS file. Commonly used unicodes, click to copy.</p>

@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SemiFooter from '../components/SemiFooter.astro';
+
+import testimonialImage from "/src/assets/images/users/user1.webp"
 ---
 
 <Layout title="Portfolio Prototype v3 | About">
@@ -25,7 +27,7 @@ import SemiFooter from '../components/SemiFooter.astro';
                     <h3 class="text-4xl">Capabilities</h3>
                 </header>
 
-                <footer class=" py-8 md:py-24 flex flex-col gap-12 font-Syne md:w-full">
+                <footer class=" pt-8 md:pt-20 md:pb-12 flex flex-col gap-12 font-Syne md:w-full">
                     <section>
                         <ul class="listOfServices [&>li]:bg-[#1d1f20] flex flex-col gap-8 md:flex md:flex-row md:[&>li]:w-full
                             [&>li>article]:relative [&>li>article]:px-8 [&>li>article]:py-8 [&>li>article]:flex [&>li>article]:flex-col [&>li>article]:justify-center [&>li>article]:items-start [&>li>article]:gap-8 [&_svg]:fill-white
@@ -104,19 +106,19 @@ import SemiFooter from '../components/SemiFooter.astro';
                 </footer>
             </section>
 
-            <section id="testimonial" class="opacity-40 translate-x-[-10px] transition-all duration-500 flex flex-col gap-16 md:gap-24 justify-center items-start">
+            <section class="flex flex-col gap-16 md:gap-24 justify-center items-start">
                 <header>
                     <h3 class="text-4xl">Don't take it from me</h3>
                 </header>
 
-                <section class="flex flex-col gap-12">
+                <section class="flex flex-col gap-20">
                     <article class="text-[#9f968a] max-w-2xl text-lg flex flex-col justify-center items-start gap-8  text-pretty">
                         <div>
                             <p>We brought Ben on to help implement and improve the design of the UI powering a hardware demo that was key to helping us raise a funding round. Ben worked quickly alongside our team internally, his combined design and development knowledge helped us move fast and meet our deadlines. <span class="text-white">His eye for detail and taste helped us over-deliver and polish on a tight timeline</span>.</p>
                         </div>
 
                         <footer class="flex flex-row gap-4 justify-center items-center">
-                            <img class="size-12 rounded-lg" src="/src/assets/images/users/user1.webp" alt="">
+                            <img class="size-12 rounded-lg" src={testimonialImage?.src} alt="">
                             <div>
                                 <h6 class="text-white text-base">Vasu Nadella</h6>
                                 <p class="text-sm">Co-founder & CEO, Vital</p>
@@ -130,7 +132,7 @@ import SemiFooter from '../components/SemiFooter.astro';
                         </div>
 
                         <footer class="flex flex-row gap-4 justify-center items-center">
-                            <img class="size-12 rounded-lg" src="/src/assets/images/users/user1.webp" alt="">
+                            <img class="size-12 rounded-lg" src={testimonialImage?.src} alt="">
                             <div>
                                 <h6 class="text-white text-base">Vasu Nadella</h6>
                                 <p class="text-sm">Co-founder & CEO, Vital</p>
@@ -147,14 +149,6 @@ import SemiFooter from '../components/SemiFooter.astro';
 	</main>
 	<Footer />
 </Layout>
-
-<script>
-    const $ = (selector: string) => document.querySelector(selector)
-    setTimeout(() => {
-        $('#testimonial')?.classList.add('!opacity-100')
-        $('#testimonial')?.classList.add('!translate-x-[0px]') 
-    }, 400)
-</script>
 
 <style>
 	
