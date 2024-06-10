@@ -32,3 +32,24 @@ const { page } = Astro.props;
     </ul>
 
 </header>
+
+
+<script define:vars={{ page }}>
+
+    function removeClass(){
+        document.querySelector('.index').classList.remove("text-white")
+        document.querySelector('.gallery').classList.remove("text-white")
+        document.querySelector('.index').classList.remove("text-white")
+    }
+    if(page == "index"){
+            removeClass()
+            document.querySelector('.index').classList.add("text-white")
+    }else if(page == "gallery"){
+        removeClass()
+            document.querySelector('.gallery').classList.add("text-white")
+    }else if(page == "about"){
+        
+        removeClass()
+            document.querySelector('.about').classList.add("text-white")
+    }
+</script>
