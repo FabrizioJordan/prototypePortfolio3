@@ -19,56 +19,54 @@ import galleryImage from "/src/assets/images/gallery/a1.webp"
                 <p class="text-lg max-w-xl text-balance">Various samples of work, a mix of personal projects, client work, and concepts that never made it past the drawing board. Enjoy the scroll. </p>
             </header>
         
-            <section class="flex flex-col gap-24">
+            <section class="flex flex-col gap-24
+            [&>article]:flex [&>article]:flex-col [&>article]:gap-8">
         
-                <article class="flex flex-col gap-16">
-
+                <article>
                     <header class="relative h-[400px]">
-                        <div class="absolute top-0 right-0 flex flex-row gap-8">
-                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
-                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
-                        </div>
-                    </header>
-
-                    <footer class="flex flex-col gap-8 max-w-lg items-start">
-                        <h4 class="text-xl">Common.wtf</h4>
-                        <p class="text-[#8a847a] text-lg">A weekend project wrapped in a single HTML & CSS file. Commonly used unicodes, click to copy.</p>
-                        <a class="px-6 py-2 bg-white rounded-3xl text-black flex flex-row gap-1 justify-center items-center" href="">Common.wtf<svg class="size-4 rotate-[-45deg]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#000" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
-                    </footer>
-                </article>
-
-                <article class="flex flex-col gap-8">
-
-                    <header class="relative h-[400px]">
-                        <div class="absolute top-0 right-0 flex flex-row gap-4 ">
-                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
-                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
-                        </div>
-                    </header>
-
-                    <footer class="flex flex-col gap-4 max-w-lg items-start">
-                        <h4 class="text-xl">Common.wtf</h4>
-                        <p class="text-[#8a847a] text-lg">A weekend project wrapped in a single HTML & CSS file. Commonly used unicodes, click to copy.</p>
-                        <a class="px-6 py-3 bg-white rounded-3xl text-black" href="">Common.wtf</a>
-                    </footer>
-                </article>
-
-                <article class="flex flex-col gap-8">
-
-                    <header class="relative h-[400px]">
-                        <div class="absolute top-0 right-0 flex flex-row gap-4 ">
-                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
-                            <img class="h-[400px] object-cover" src={galleryImage?.src} alt="">
+                        <div class="absolute top-0 right-0 flex flex-row gap-4 [&>img]:h-[400px] [&>img]:object-cover">
+                            <img src={galleryImage?.src} alt="#">
+                            <img src={galleryImage?.src} alt="#">
                         </div>
                     </header>
                     
-                    <footer class="flex flex-col gap-4 max-w-lg items-start">
-                        <h4 class="text-xl">Common.wtf</h4>
-                        <p class="text-[#8a847a] text-lg">A weekend project wrapped in a single HTML & CSS file. Commonly used unicodes, click to copy.</p>
-                        <a class="px-6 py-3 bg-white rounded-3xl text-black" href="">Common.wtf</a>
+                    <footer class="flex flex-col gap-6 max-w-lg items-start">
+                        <h4 class="text-2xl">Common.wtf</h4>
+                        <p class="text-[#8a847a]">A weekend project wrapped in a single HTML & CSS file. Commonly used unicodes, click to copy.</p>
+                        <a class="px-6 py-3 bg-white rounded-3xl text-black hover:bg-[#cacaca] transition-colors duration-300" href="">Common.wtf</a>
                     </footer>
                 </article>
-        
+
+                <article>
+                    <header class="relative h-[400px]">
+                        <div class="absolute top-0 right-0 flex flex-row gap-4 [&>img]:h-[400px] [&>img]:object-cover">
+                            <img src={galleryImage?.src} alt="#">
+                            <img src={galleryImage?.src} alt="#">
+                        </div>
+                    </header>
+                    
+                    <footer class="flex flex-col gap-6 max-w-lg items-start">
+                        <h4 class="text-2xl">Common.wtf</h4>
+                        <p class="text-[#8a847a]">A weekend project wrapped in a single HTML & CSS file. Commonly used unicodes, click to copy.</p>
+                        <a class="px-6 py-3 bg-white rounded-3xl text-black hover:bg-[#cacaca] transition-colors duration-300" href="">Common.wtf</a>
+                    </footer>
+                </article>
+
+                <article>
+                    <header class="relative h-[400px]">
+                        <div class="absolute top-0 right-0 flex flex-row gap-4 [&>img]:h-[400px] [&>img]:object-cover">
+                            <img src={galleryImage?.src} alt="#">
+                            <img src={galleryImage?.src} alt="#">
+                        </div>
+                    </header>
+                    
+                    <footer class="flex flex-col gap-6 max-w-lg items-start">
+                        <h4 class="text-2xl">Common.wtf</h4>
+                        <p class="text-[#8a847a]">A weekend project wrapped in a single HTML & CSS file. Commonly used unicodes, click to copy.</p>
+                        <a class="px-6 py-3 bg-white rounded-3xl text-black hover:bg-[#cacaca] transition-colors duration-300" href="">Common.wtf</a>
+                    </footer>
+                </article>
+
             </section>
         
         </section>
