@@ -8,48 +8,7 @@ import Footer from '../components/Footer.astro';
 <Layout title="Portfolio Prototype v3">
 	<Header page='index' />
 	<main class="scroll-smooth w-full px-6 md:px-10 pt-12 pb-6 max-w-5xl m-auto">
-		<Init />
+		<Init/>
 	</main>
 	<Footer />
 </Layout>
-
-<style>
-	
-</style>
-
-
-<script is:inline>
-const $ = selector => document.querySelector(selector)
-const S$ = selector => document.querySelectorAll(selector)
-
-initTexts = []
-initTitles = []
-
-for (let i = 1; i <= 4; i++) {
-    initTexts[`initText${i}`] = $(`.initText-${i}`);
-    initTitles[`initTitle${i}`] = $(`.initTitle-${i}`);
-
-    if (initTitles[`initTitle${i}`]) {
-        initTitles[`initTitle${i}`].addEventListener('click', () => {
-
-            // Ocultar todos los initTexts
-            for (let j = 1; j <= 4; j++) {
-                initTexts[`initText${j}`].classList.add('hidden');
-                setTimeout(() => {
-                    initTexts[`initText${j}`].classList.remove('!opacity-100');
-                }, 100)
-                initTitles[`initTitle${j}`].classList.remove('!text-white');
-            }
-
-            // Mostrar el initText correspondiente al initTitle clickeado
-            initTexts[`initText${i}`].classList.remove('hidden');
-            setTimeout(() => {
-                initTexts[`initText${i}`].classList.add('!opacity-100');
-            }, 100)
-            initTitles[`initTitle${i}`].classList.add('!text-white');
-            
-        });
-    }
-}
-
-</script>
